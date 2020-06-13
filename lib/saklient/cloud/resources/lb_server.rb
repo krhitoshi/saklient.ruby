@@ -304,7 +304,7 @@ module Saklient
           ])
           port = Saklient::Util::get_by_path_any([obj], ['Port', 'port'])
           @_port = nil
-          @_port = (port).to_s().to_i(10) if !(port).nil?
+          @_port = (port).to_s() if !(port).nil?
           @_port = nil if @_port == 0
           responseExpected = Saklient::Util::get_by_path_any([health, obj], [
             'Status',
@@ -313,7 +313,7 @@ module Saklient
             'response_expected'
           ])
           @_response_expected = nil
-          @_response_expected = (responseExpected).to_s().to_i(10) if !(responseExpected).nil?
+          @_response_expected = (responseExpected).to_s() if !(responseExpected).nil?
           @_response_expected = nil if @_response_expected == 0
           @_active_connections = 0
           @_status = nil

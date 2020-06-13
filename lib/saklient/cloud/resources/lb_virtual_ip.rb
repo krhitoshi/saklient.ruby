@@ -192,7 +192,7 @@ module Saklient
           @_virtual_ip_address = vip
           port = Saklient::Util::get_by_path_any([obj], ['Port', 'port'])
           @_port = nil
-          @_port = (port).to_s().to_i(10) if !(port).nil?
+          @_port = (port).to_s() if !(port).nil?
           @_port = nil if @_port == 0
           delayLoop = Saklient::Util::get_by_path_any([obj], [
             'DelayLoop',
@@ -201,7 +201,7 @@ module Saklient
             'delay'
           ])
           @_delay_loop = nil
-          @_delay_loop = (delayLoop).to_s().to_i(10) if !(delayLoop).nil?
+          @_delay_loop = (delayLoop).to_s() if !(delayLoop).nil?
           @_delay_loop = nil if @_delay_loop == 0
           sorryServer = Saklient::Util::get_by_path_any([obj], [
             'SorryServer',
